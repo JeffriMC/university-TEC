@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 
 public class Details_View extends JFrame{
 
-	public JButton btn_delete_sensor;
+	public JButton btn_search_sensor;
 	public JButton btn_cancel;
 	public JLabel lb_title;
 	public JTextField txt_id_sensor;
@@ -24,7 +24,7 @@ public class Details_View extends JFrame{
 	
 	private void init_components() 
 	{
-		btn_delete_sensor = new JButton();
+		btn_search_sensor = new JButton();
 		btn_cancel = new JButton();
 		lb_title = new JLabel();
 		txt_id_sensor = new JTextField();
@@ -45,11 +45,13 @@ public class Details_View extends JFrame{
 	
 	private void config_components() 
 	{
-		btn_delete_sensor.setText("Detalles");
-		btn_delete_sensor.setBounds(485, 150, 160, 30);
+		btn_search_sensor.setText("Detalles");
+		btn_search_sensor.setBounds(485, 150, 160, 30);
+		btn_search_sensor.setActionCommand("btn_search");
 		
 		btn_cancel.setText("Cancelar");
 		btn_cancel.setBounds(150, 150, 160, 30);
+		btn_cancel.setActionCommand("btn_cancel");
 		
 		lb_title.setText("ID : ");
 		lb_title.setBounds(100, 50, 100, 10);
@@ -59,7 +61,7 @@ public class Details_View extends JFrame{
 	
 	private void add_components() 
 	{
-		add(btn_delete_sensor);
+		add(btn_search_sensor);
 		add(btn_cancel);
 		
 		add(lb_title);

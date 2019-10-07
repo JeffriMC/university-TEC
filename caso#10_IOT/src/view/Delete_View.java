@@ -46,9 +46,11 @@ public class Delete_View extends JFrame{
 	{
 		btn_delete_sensor.setText("Agregar sensor");
 		btn_delete_sensor.setBounds(485, 150, 160, 30);
+		btn_delete_sensor.setActionCommand("btn_delete");
 		
 		btn_cancel.setText("Cancelar");
 		btn_cancel.setBounds(150, 150, 160, 30);
+		btn_cancel.setActionCommand("btn_cancel");
 		
 		lb_title.setText("ID : ");
 		lb_title.setBounds(100, 50, 100, 10);

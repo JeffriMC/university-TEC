@@ -58,9 +58,11 @@ public class Add_View extends JFrame{
 	{
 		btn_add_sensor.setText("Agregar sensor");
 		btn_add_sensor.setBounds(550, 450, 160, 30);
+		btn_add_sensor.setActionCommand("btn_add");
 		
 		btn_cancel.setText("Cancelar");
 		btn_cancel.setBounds(100, 450, 160, 30);
+		btn_cancel.setActionCommand("btn_cancel");
 		
 		lb_id.setText("ID : ");
 		lb_id.setBounds(100, 50, 100, 10);

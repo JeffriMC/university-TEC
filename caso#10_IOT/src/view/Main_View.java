@@ -19,6 +19,7 @@ public class Main_View extends JFrame {
 	public JButton btn_add_sensor;
 	public JButton btn_delete_sensor;
 	public JButton btn_details_sensor;
+	public JButton btn_exit;
 	
 	public Main_View() {}
 	public Main_View(String name_window) {
@@ -38,6 +39,7 @@ public class Main_View extends JFrame {
 		btn_add_sensor = new JButton();
 		btn_delete_sensor = new JButton();
 		btn_details_sensor = new JButton();
+		btn_exit = new JButton();
 		config_buttons();
 		add_components();
 	}
@@ -57,12 +59,18 @@ public class Main_View extends JFrame {
 		btn_details_sensor.setBounds(620, 90, 160, 30);
 		btn_details_sensor.setEnabled(true);
 		btn_details_sensor.setActionCommand("details_sensor");
+		
+		btn_exit.setText("Salir");
+		btn_exit.setBounds(620, 130, 160, 30);
+		btn_exit.setEnabled(true);
+		btn_exit.setActionCommand("btn_exit");
 	}
 	
 	private void add_components() {
 		add(btn_add_sensor);
 		add(btn_delete_sensor);
 		add(btn_details_sensor);
+		add(btn_exit);
 	}
 
 }
