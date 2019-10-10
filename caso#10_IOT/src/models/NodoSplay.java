@@ -1,21 +1,22 @@
 package models;
 
-public class NodoSplay<String> {
-	String valor;
-	NodoSplay<String> hijo_derecho;
-	NodoSplay<String> hijo_izquierdo;
-	NodoSplay<String> padre;
+public class NodoSplay {
+	Sensor valor;
+	NodoSplay hijo_derecho;
+	NodoSplay hijo_izquierdo;
+	NodoSplay padre;
 	
 	
 	public NodoSplay() {
-		
+		valor = new Sensor();
 	}
 	
-	public NodoSplay(String pValor) {
+	public NodoSplay(Sensor pValor) {
+		valor = new Sensor();
 		this.valor=pValor;
 	}
 	
-	public String getValor() {
+	public Sensor getValor() {
 		return valor;
 	}
 	
