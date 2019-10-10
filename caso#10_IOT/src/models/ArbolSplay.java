@@ -1,6 +1,6 @@
 package models;
 
-public class ArbolSplay<K extends Comparable<K>, V> {
+public class ArbolSplay<String> {
 	private NodoSplay<String> raiz;
 
 	
@@ -48,7 +48,7 @@ public class ArbolSplay<K extends Comparable<K>, V> {
 		if(pNodo==null || pValor==pNodo.valor) {
 			return pNodo;
 		}
-		if(pValor<pNodo.valor) {
+		if(pValor.equals(pNodo.valor)) {
 			return buscar_aux(pNodo.hijo_izquierdo,pValor);
 		}
 		return buscar_aux(pNodo.hijo_derecho,pValor);
@@ -88,7 +88,7 @@ public class ArbolSplay<K extends Comparable<K>, V> {
 		
 		while(aux_2!=null) {
 			aux_1=aux_2;
-			if(pNodo.valor<aux_2.valor) {
+			if((int)pNodo.valor<(int)(aux_2.valor)) {
 				aux_2=aux_2.hijo_izquierdo;
 			}else {
 				aux_2=aux_2.hijo_derecho;
@@ -97,7 +97,7 @@ public class ArbolSplay<K extends Comparable<K>, V> {
 		pNodo.padre=aux_1;
 		if(aux_1==null) {
 			raiz=pNodo;
-		}else if(pNodo.valor<aux_1.valor){
+		}else if((int)pNodo.valor<(int)(aux_1.valor)){
 			aux_1.hijo_izquierdo=pNodo;
 		}else {
 			aux_1.hijo_derecho=pNodo;	
@@ -112,27 +112,5 @@ public class ArbolSplay<K extends Comparable<K>, V> {
 		return pNodo;
 	}
 
-	private void print_aux(NodoSplay<String> currPtr, String indent, boolean last) {
-		// print the tree structure on the screen
-	   	if (currPtr != null) {
-		   System.out.print(indent);
-		   if (last) {
-		      System.out.print("R----");
-		      indent += "     ";
-		   } else {
-		      System.out.print("L----");
-		      indent += "|    ";
-		   }
-
-		   System.out.println(currPtr.valor);
-
-		   print_aux(currPtr.hijo_izquierdo, indent, false);
-		   print_aux(currPtr.hijo_derecho, indent, true);
-		}
-	}
-	
-	public void imprimir() {
-		print_aux(this.raiz, "", true);
-	}
 	
 }
