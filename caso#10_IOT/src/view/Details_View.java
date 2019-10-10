@@ -12,7 +12,7 @@ public class Details_View extends JFrame{
 	public JButton btn_search_sensor;
 	public JButton btn_cancel;
 	public JLabel lb_title;
-	public JTextField txt_id_sensor;
+	public JTextField txt_name_sensor;
 	
 	public Details_View() {}
 	
@@ -27,7 +27,7 @@ public class Details_View extends JFrame{
 		btn_search_sensor = new JButton();
 		btn_cancel = new JButton();
 		lb_title = new JLabel();
-		txt_id_sensor = new JTextField();
+		txt_name_sensor = new JTextField();
 		config_components();
 		add_components();
 	}
@@ -56,7 +56,7 @@ public class Details_View extends JFrame{
 		lb_title.setText("ID : ");
 		lb_title.setBounds(100, 50, 100, 10);
 
-		txt_id_sensor.setBounds(280, 40, 450, 30);
+		txt_name_sensor.setBounds(280, 40, 450, 30);
 	}
 	
 	private void add_components() 
@@ -66,7 +66,7 @@ public class Details_View extends JFrame{
 		
 		add(lb_title);
 		
-		add(txt_id_sensor);
+		add(txt_name_sensor);
 	}
 	
 }

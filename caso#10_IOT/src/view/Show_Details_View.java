@@ -53,24 +53,24 @@ public class Show_Details_View extends JFrame{
 	
 	private void config_components() 
 	{
-		btn_return.setText("Agregar sensor");
-		btn_return.setBounds(485, 150, 160, 30);
-		btn_return.setActionCommand("btn_volver");
+		btn_return.setText("Volver");
+		btn_return.setBounds(600, 220, 160, 30);
+		btn_return.setActionCommand("btn_return");
 		
-		lb_id.setText("ID : ");;
-		lb_id.setBounds(100, 50, 100, 10);
-		lb_canton.setText("ID : ");;
-		lb_canton.setBounds(100, 70, 100, 10);
-		lb_district.setText("ID : ");;
-		lb_district.setBounds(100, 90, 100, 10);
-		lb_neighborhood.setText("ID : ");
-		lb_neighborhood.setBounds(100, 110, 100, 10);
-		lb_consumption.setText("ID : ");;
-		lb_consumption.setBounds(100, 130, 100, 10);
-		lb_father.setText("ID : ");;
-		lb_father.setBounds(100, 150, 100, 10);
-		lb_sons.setText("ID : ");
-		lb_sons.setBounds(100, 170, 100, 10);		
+		lb_id.setText("ID : ");
+		lb_id.setBounds(100, 10, 500, 15);
+		lb_canton.setText("Cantón : ");
+		lb_canton.setBounds(100, 40, 500, 15);
+		lb_district.setText("Distrito : ");
+		lb_district.setBounds(100, 70, 500, 15);
+		lb_neighborhood.setText("Barrio : ");
+		lb_neighborhood.setBounds(100, 100, 500, 15);
+		lb_consumption.setText("Consumo cm3/minuto : ");
+		lb_consumption.setBounds(100, 130, 500, 15);
+		lb_father.setText("Padre : ");
+		lb_father.setBounds(100, 160, 500, 15);
+		lb_sons.setText("Hijos : ");
+		lb_sons.setBounds(100, 190, 500, 15);		
 	}
 	
 	private void add_components() 
